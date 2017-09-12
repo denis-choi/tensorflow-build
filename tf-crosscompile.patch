@@ -254,8 +254,8 @@ index 000000000..3ff006da8
 +  cxx_builtin_include_directory: "%%CT_ROOT_DIR%%/%%CT_NAME%%/libc/usr/include/"
 +  cxx_builtin_include_directory: "%%CT_ROOT_DIR%%/lib/gcc/%%CT_NAME%%/%%CT_GCC_VERSION%%/include"
 +  cxx_builtin_include_directory: "%%CT_ROOT_DIR%%/lib/gcc/%%CT_NAME%%/%%CT_GCC_VERSION%%/include-fixed"
-+  
-+  cxx_flag: "-std=c++11"	
++
++  cxx_flag: "-std=c++11"
 +  linker_flag: "-lstdc++"
 +
 +  unfiltered_cxx_flag: "-Wno-builtin-macro-redefined"

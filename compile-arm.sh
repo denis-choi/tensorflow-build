@@ -14,17 +14,18 @@ then
 	exit 1
 fi	
 
-mkdir $TARGET
+if [ -d $TARGET ]
+then
+	echo "$TARGET is exist"
+else
+	mkdir $TARGET
+	git clone https://github.com/raspberrypi/tools "$TARGET/$TOOLS_DIR" --depth 1
+fi
 
 CURRENT_DIR=$(pwd)
 
-git clone https://github.com/raspberrypi/tools "$TARGET/$TOOLS_DIR" --depth 1
+#git clone https://github.com/raspberrypi/tools "$TARGET/$TOOLS_DIR" --depth 1
 
 ./cross-compile.sh $CURRENT_DIR/$TARGET/$TOOLS_DIR/$TOOLCHAIN_ROOT $TOOLCHAIN_NAME $VERSION
-
-
-
-
-
 
 
